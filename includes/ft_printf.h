@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/04 20:06:03 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/06 01:57:10 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int			ft_printf(const char *fmt, ...);
 int			ft_isletter(char c);
 int			ft_print_list(t_info *info);
 
-void		ft_work(char *ap, t_info *info);
 void		ft_init_strct(t_info *info);
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i);
 void		ft_gotoindex(const char *fmt, unsigned int *i, unsigned int *j);
@@ -55,8 +54,8 @@ void		ft_check_flag(const char *fmt, int *i, char *dest);
 void		ft_parse_arg(const char *fmt, int *i, t_info *info);
 void		ft_clean_info(t_info *info);
 void		ft_stars(int value, t_info *info);
-void		ft_work(char *ap, t_info *info);
-void		ft_dioux(char *ap, t_info *info);
+void		ft_work(void *ap, t_info *info);
+void		ft_dioux(void *ap, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);

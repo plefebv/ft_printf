@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:02:07 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/06/29 08:27:59 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/06 01:57:40 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,5 @@ void		ft_epur_fmt(t_info *info, const char *fmt, int *i)
 	ft_put_in_lst(&info[0], data);
 }
 
-/*void		ft_go_to_index(const char *fmt, unsigned int *i, unsigned int *j)
-{
-	*j = 0;
-	while (fmt[*i + *j] && ft_strlen(fmt) - 1 != *i + *j)
-	{
-		if (fmt[*i + *j] == '%' && ft_isparam(fmt[*i + *j + 1]))
-			break ;
-		*j += 1;
-	}
-}
-*/
-
+int			ft_dio(
+		fonction qui check si cest un d ou i 1/0 

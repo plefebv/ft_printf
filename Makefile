@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/31 18:17:14 by plefebvr          #+#    #+#              #
-#    Updated: 2016/06/27 09:25:12 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/07/06 01:04:31 by plefebvr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = ft_printf.c \
 	  ft_first_utils.c\
 	  ft_flag.c \
 	  ft_parse.c \
-	  ft_init.c
+	  ft_init.c \
+	  ft_work.c 
 OBJ = $(SRC:.c=.o)
 
 SRCS = $(addprefix $(SRC_PATH), $(SRC))
@@ -54,7 +55,7 @@ $(OBJS) : $(SRCS)
 	@echo "\n\n === Start Printf Compilation ===\n"
 	@$(BLU)
 	@echo "	Create Printf objects"
-	@gcc -Wall -Wextra -Werror -c $(SRCS) -I./src/libft/libft.a
+	@gcc -c $(SRCS) -I./src/libft/libft.a
 	@mkdir -p $(OBJ_PATH)
 	@mv $(OBJ) $(OBJ_PATH)
 	@$(RESET)
