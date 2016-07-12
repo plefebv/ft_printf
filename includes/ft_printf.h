@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/06 01:57:10 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/12 17:24:02 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,18 @@ typedef struct			s_info
 	char				letter;
 	int					stars;
 	int					ret;
+	char				sign;
 	t_lst				*lst;
 	t_lst				*lst_first;
 }						t_info;
 
+char		*ft_itoa_ll(long long n, t_info *info);
+char		*ft_itoa_test(int n, t_info *info);
+
 int			ft_printf(const char *fmt, ...);
 int			ft_isletter(char c);
 int			ft_print_list(t_info *info);
+int			ft_dio(t_info *info);
 
 void		ft_init_strct(t_info *info);
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i);
@@ -56,6 +61,7 @@ void		ft_clean_info(t_info *info);
 void		ft_stars(int value, t_info *info);
 void		ft_work(void *ap, t_info *info);
 void		ft_dioux(void *ap, t_info *info);
+void		ft_dioux_lenght(void *ap, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);

@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:02:07 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/06 01:57:40 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/07 01:52:15 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void		ft_clean_info(t_info *info)
 		ft_memdel((void **)&info->lenght);
 	info->letter = '?';
 	info->stars = 0;
+	info->sign = '+';
 }
 
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i)
@@ -56,5 +57,9 @@ void		ft_epur_fmt(t_info *info, const char *fmt, int *i)
 	ft_put_in_lst(&info[0], data);
 }
 
-int			ft_dio(
-		fonction qui check si cest un d ou i 1/0 
+int			ft_dio(t_info *info)
+{
+	if (info->letter == 'd' || info->letter == 'i')
+		return (1);
+	return (0);
+}

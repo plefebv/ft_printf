@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 04:02:50 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/06 01:35:01 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/12 17:45:07 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,21 @@
 int		main(void)
 {
 	int ret;
+	t_info	test;
 
+	ft_init_strct(&test);
 	//ret = ft_printf("12345%-+ 666.*hhd %*.999dcaca", 999, 666, 999);
 	//ret = printf("%*d\n%*d\n", 20, 999, 20, 999);
 	//ret = ft_printf("%20.*hhd %20.*ld %*.20lld %20.20hd", 20, 20, 20);
 	//ret = printf("%20.*d %20.*d %*.20d %20.20d", 20, 20, 20, 20, 20, 20, 20);
-	ft_printf("Coucou %hhd Thomasse\n\n\n\n", 300000);
-	printf("%hhd\n", 300000);
-	ft_putchar('\n');
+	//printf("%s", ft_itoa(-1234));
+	//ft_printf("Coucou %-hhd Thomasse %hhd\n", 300000, 2345);
+	printf("%08d\n", 23);
+	ft_printf("%d\n%d\n", -2883, -234);
+	//printf("%s\n", ft_itoa_test(-3000, &test));
+	//printf("Sign = %c\n", test.sign);
+	//printf("%s\n", ft_itoa(-3000));
+	//ft_putchar('\n');
 	//ft_nbrendl(ret);
 	return (0);
 }

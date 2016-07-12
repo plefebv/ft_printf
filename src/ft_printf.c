@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 03:00:16 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/05 23:21:21 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/07 01:52:15 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void		ft_print_info(t_info *info)
 	ft_nbrendl(info->stars);
 	ft_putstr("Valeur ret = ");
 	ft_nbrendl(info->ret);
+	ft_putstr("Valeur sign = ");
+	ft_putchar(info->sign);
 	ft_putstr("\n\n");
 }
 
