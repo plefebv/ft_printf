@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:26:56 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/12 17:34:03 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/14 03:04:00 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 static long long		ft_nlen(long long n)
 {
 	long long 			i;
-	unsigned long long nb;
+	long long nb;
 
 	i = 0;
 	nb = n;
 	if (n == 0)
 		return (1);
+	if (n < 0)
+		i++;
 	while (nb)
 	{
 		nb = nb / 10;
@@ -48,7 +50,7 @@ static int		n_len_int(int n)
 	return (i);
 }
 
-char			*ft_itoa_ll(long long n, t_info *info)
+/*char			*ft_itoa_ll(long long n, t_info *info)
 {
 	char				*str;
 	long long			i;
@@ -75,16 +77,16 @@ char			*ft_itoa_ll(long long n, t_info *info)
 	}
 	else
 		return (NULL);
-}
+}*/
 
-char 			*ft_itoa_test(int n, t_info *info)
+char 			*ft_itoa_ll(long long n, t_info *info)
 {
-	char	*str;
-	int		i;
+	char			*str;
+	long long		i;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	i = n_len_int(n) - 1;
+	i = ft_nlen(n) - 1;
 	if ((str = (char *)malloc(sizeof(char) * (i + 1))))
 	{
 		str[i + 1] = '\0';
@@ -107,3 +109,26 @@ char 			*ft_itoa_test(int n, t_info *info)
 		return (NULL);
 }
 
+char 			*ft_itoa_ull(unsigned long long n, t_info *info)
+{
+	char			*str;
+	unsigned long long		i;
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	i = ft_nlen(n) - 1;
+	if ((str = (char *)malloc(sizeof(char) * (i + 1))))
+	{
+		str[i + 1] = '\0';
+		if (n == 0)
+			str[0] = '0';
+		while (n > 0)
+		{
+			str[i--] = (n % 10) + 48;
+			n = n / 10;
+		}
+		return (str);
+	}
+	else
+		return (NULL);
+}

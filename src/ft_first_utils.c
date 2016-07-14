@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:02:07 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/07 01:52:15 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/14 03:03:18 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,16 @@ int			ft_dio(t_info *info)
 	if (info->letter == 'd' || info->letter == 'i')
 		return (1);
 	return (0);
+}
+
+int			ft_cih(char *s, int c)
+{
+	int		i;
+	i = 0;
+
+	while (s[i] && s[i] != c)
+		i++;
+	if (!s[i])
+		return (0);
+	return (1);
 }

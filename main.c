@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 04:02:50 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/12 17:45:07 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/14 03:30:32 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ int		main(void)
 	//ret = printf("%20.*d %20.*d %*.20d %20.20d", 20, 20, 20, 20, 20, 20, 20);
 	//printf("%s", ft_itoa(-1234));
 	//ft_printf("Coucou %-hhd Thomasse %hhd\n", 300000, 2345);
-	printf("%08d\n", 23);
-	ft_printf("%d\n%d\n", -2883, -234);
+	//printf("%+8d\n", 23);
+	ft_printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
+	printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
 	//printf("%s\n", ft_itoa_test(-3000, &test));
 	//printf("Sign = %c\n", test.sign);
 	//printf("%s\n", ft_itoa(-3000));

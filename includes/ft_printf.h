@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/12 17:24:02 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/07/14 03:05:51 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,14 @@ typedef struct			s_info
 }						t_info;
 
 char		*ft_itoa_ll(long long n, t_info *info);
-char		*ft_itoa_test(int n, t_info *info);
+char		*ft_itoa_ull(unsigned long long n, t_info *info);
+//char		*ft_itoa_test(int n, t_info *info);
 
 int			ft_printf(const char *fmt, ...);
 int			ft_isletter(char c);
 int			ft_print_list(t_info *info);
 int			ft_dio(t_info *info);
+int			ft_cih(char *s, int c);
 
 void		ft_init_strct(t_info *info);
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i);
