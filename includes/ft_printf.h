@@ -63,7 +63,7 @@ void		ft_clean_info(t_info *info);
 void		ft_stars(int value, t_info *info);
 void		ft_work(void *ap, t_info *info);
 void		ft_dioux(void *ap, t_info *info);
-void		ft_dioux_lenght(void *ap, t_info *info);
+void		ft_di_lenght(void *ap, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);

@@ -12,13 +12,34 @@
 
 #include "../includes/ft_printf.h"
 
-/*void	ft_dioux(void *ap, t_info *info)
+void		ft_dioux(void *ap, t_info *info)
 {
-	if (ft_strcmp(info->lenght, "hh")  == 0)
-		info->lst->data
-	else if (ft_strcmp(info->lenght, "h")  == 0)
-	else if (ft_strcmp(info->lenght, "ll")  == 0)
-	else if (ft_strcmp(info->lenght, "l")  == 0)
-	else if (ft_strcmp(info->lenght, "j")  == 0)
-	else if (ft_strcmp(info->lenght, "z")  == 0)
-}*/	
+	if (info->letter == 'd' || info->letter == 'i')
+		info->lenght ? ft_di_lenght(ap, info) :
+		ft_put_in_lst(info, ft_itoa_ll((signed)ap, info));
+	else if (info->letter == 'u')
+		info->lenght ? ft_u_lenght(ap, info) :
+		ft_put_in_lst(info, ft_itoa_ull((unsigned)ap, info));
+/*	else if (info->letter == 'o')
+		info->lenght ? ft_o_lenght(ap, info) :
+		ft_put_in_lst(info, ft_itoa_o((unsigned)ap, info));
+	else if (info->letter == 'x')
+		info->lenght ? ft_x_lenght(ap, info) :
+		ft_put_in_lst(info, ft_itoa_x((unsigned)ap, info));*/
+}
+
+void		ft_di_lenght(void *ap, t_info *info)
+{
+	if (ft_strcmp("hh", info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ll((char)ap, info));
+	else if (ft_strcmp("h", info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ll((short)ap, info));
+	else if (ft_strcmp("l", info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ll((long)ap, info));
+	else if (ft_strcmp("ll", info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ll((long long)ap, info));
+	else if (ft_strcmp("j", info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ll((intmax_t)ap, info));
+	else if (ft_strcmp("z",info->lenght) == 0)
+		ft_put_in_lst(info, ft_itoa_ull((size_t)ap, info));
+}

@@ -16,13 +16,14 @@ SRC_PATH= ./src/
 OBJ_PATH = ./src/obj/
 INC_PATH = ./includes/
 SRC = ft_printf.c \
-	  ft_lst_utils.c \
-	  ft_first_utils.c\
-	  ft_flag.c \
-	  ft_parse.c \
-	  ft_init.c \
-	  ft_work.c \
-	  ft_itoa_ll.c
+	ft_lst_utils.c \
+	ft_first_utils.c\
+	ft_flag.c \
+	ft_parse.c \
+	ft_init.c \
+	ft_work.c \
+	ft_dioux.c \
+	ft_itoa_ll.c \
 	  
 OBJ = $(SRC:.c=.o)
 

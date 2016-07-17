@@ -17,9 +17,9 @@
 int		main(void)
 {
 	int ret;
-	t_info	test;
+//	t_info	test;
 
-	ft_init_strct(&test);
+//	ft_init_strct(&test);
 	//ret = ft_printf("12345%-+ 666.*hhd %*.999dcaca", 999, 666, 999);
 	//ret = printf("%*d\n%*d\n", 20, 999, 20, 999);
 	//ret = ft_printf("%20.*hhd %20.*ld %*.20lld %20.20hd", 20, 20, 20);
@@ -27,8 +27,10 @@ int		main(void)
 	//printf("%s", ft_itoa(-1234));
 	//ft_printf("Coucou %-hhd Thomasse %hhd\n", 300000, 2345);
 	//printf("%+8d\n", 23);
-	ft_printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
-	printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
+	//ft_printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
+	//printf("%hhu %hu %lu %llu %ju %zu\n", 2883333, 2883333, 2883333, 2883333, 2883333, -2883333);
+	printf("%hhi\n", 4563);
+	ft_printf("%hhi\n", 4563);
 	//printf("%s\n", ft_itoa_test(-3000, &test));
 	//printf("Sign = %c\n", test.sign);
 	//printf("%s\n", ft_itoa(-3000));
