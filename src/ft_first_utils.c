@@ -37,8 +37,8 @@ void		ft_clean_info(t_info *info)
 	info->true_precision = 0;
 	info->precision = 0;
 	info->star_precision = 0;
-	if (info->lenght)
-		ft_memdel((void **)&info->lenght);
+	if (info->length)
+		ft_memdel((void **)&info->length);
 	info->letter = '?';
 	info->stars = 0;
 	info->sign = '+';

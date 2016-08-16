@@ -24,6 +24,7 @@ SRC = ft_printf.c \
 	ft_work.c \
 	ft_dioux.c \
 	ft_itoa_ll.c \
+	ft_add_sign.c
 	  
 OBJ = $(SRC:.c=.o)
 

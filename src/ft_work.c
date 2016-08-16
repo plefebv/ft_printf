@@ -17,5 +17,5 @@ void		ft_work(void *ap, t_info *info)
 	if (info->letter == 'd' || info->letter == 'i' || info->letter == 'o'
 			|| info->letter == 'u' || info->letter == 'x' 
 			|| info->letter == 'X')
-		ft_dioux(ap, info);
+		ft_dioux_length(ap, info);
 }

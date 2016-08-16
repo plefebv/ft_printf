@@ -56,11 +56,11 @@ int			ft_print_list(t_info *info)
 	}
 	while (tmp)
 	{
-		ft_putstr(" |");
+		//ft_putstr(" |");
 		ft_putstr(tmp->data);
 		count += ft_strlen(tmp->data);
 		tmp = tmp->next;
-		ft_putstr("| ");
+		//ft_putstr("| ");
 	}
 	return (count);
 }

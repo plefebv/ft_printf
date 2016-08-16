@@ -30,9 +30,9 @@ void		ft_print_info(t_info *info)
 	ft_nbrendl(info->precision);
 	ft_putstr("Valeur star_precision = ");
 	ft_nbrendl(info->star_precision);
-	ft_putstr("Valeur lenght = ");
-	if (info->lenght)
-		ft_putendl(info->lenght);
+	ft_putstr("Valeur length = ");
+	if (info->length)
+		ft_putendl(info->length);
 	else
 		ft_putchar('\n');
 	ft_putstr("Valeur letter = ");
@@ -68,7 +68,7 @@ int			ft_printf(const char *fmt, ...)
 			while (info.stars > 0)
 				ft_stars(va_arg(ap, int), &info);
 			ft_work(va_arg(ap, char *), &info);
-			ft_print_info(&info);
+			//ft_print_info(&info);
 			ft_clean_info(&info);
 		}
 	}

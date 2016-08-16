@@ -35,7 +35,7 @@ void			ft_init_strct(t_info *strct)
 	strct->true_precision = 0;
 	strct->precision = 0;
 	strct->star_precision = 0;
-	strct->lenght = NULL;
+	strct->length = NULL;
 	strct->letter = '?';
 	strct->stars = 0;
 	strct->ret = 0;

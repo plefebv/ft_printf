@@ -34,7 +34,7 @@ typedef struct			s_info
 	int					true_precision;
 	int					precision;
 	int					star_precision;
-	char				*lenght;
+	char				*length;
 	char				letter;
 	int					stars;
 	int					ret;
@@ -63,7 +63,13 @@ void		ft_clean_info(t_info *info);
 void		ft_stars(int value, t_info *info);
 void		ft_work(void *ap, t_info *info);
 void		ft_dioux(void *ap, t_info *info);
-void		ft_di_lenght(void *ap, t_info *info);
+void		ft_di_length(void *ap, t_info *info);
+void		ft_dioux_length(void *ap, t_info *info);
+void		ft_u_length(void *ap, t_info *info);
+void		ft_di(void *ap, t_info *info, char *ret);
+void		ft_special_letter(t_info *info, char c);
+void		ft_special_letter2(t_info *info, char c);
+void		ft_add_sign(t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);

@@ -12,6 +12,50 @@
 
 #include "../includes/ft_printf.h"
 
+void		ft_special_letter2(t_info *info, char c)
+{
+	if (c == 'S')
+	{
+		info->letter = 's';
+		if (info->length != NULL)
+			free(info->length);
+		info->length = ft_strdup("l");
+	}
+	if (c == 'C')
+	{
+		info->letter = 'c';
+		if (info->length != NULL)
+			free(info->length);
+		info->length = ft_strdup("l");
+	}
+}
+
+void		ft_special_letter(t_info *info, char c)
+{
+	if (c == 'D')
+	{
+		info->letter = 'd';
+		if (info->length != NULL)
+			free(info->length);
+		info->length = ft_strdup("l");
+	}
+	if (c == 'O')
+	{
+		info->letter = 'o';
+		if (info->length != NULL)
+			free(info->length);
+		info->length = ft_strdup("l");
+	}
+	if (c == 'U')
+	{
+		info->letter = 'u';
+		if (info->length != NULL)
+			free(info->length);
+		info->length = ft_strdup("l");
+	}
+	ft_special_letter2(info, c);
+}
+
 void		ft_put_flag(const char *fmt, int *i, t_info *info)
 {
 	int		tmp;
@@ -89,18 +133,18 @@ void		ft_put_length(const char *fmt, int *i, t_info *info)
 	if (fmt[*i + 1] == 'h' && fmt[*i + 2] == 'h')
 	{
 		*i += 2;
-		info->lenght = ft_strdup("hh");
+		info->length = ft_strdup("hh");
 	}
 	if (fmt[*i + 1] == 'l' && fmt[*i + 2] == 'l')
 	{
 		*i += 2;
-		info->lenght = ft_strdup("ll");
+		info->length = ft_strdup("ll");
 	}
 	if (fmt[*i + 1] == 'h' || fmt[*i + 1] == 'l' || fmt[*i + 1] == 'j'
 			|| fmt[*i + 1] == 'z')
 	{
 		(*i)++;
-		info->lenght = ft_strsub(&fmt[*i], 0, 1);
+		info->length = ft_strsub(&fmt[*i], 0, 1);
 	}
 }
 
@@ -109,9 +153,9 @@ void		ft_put_letter(const char *fmt, int *i, t_info *info)
 	char	c;
 
 	c = fmt[*i + 1];
-	if (c == 's' || c == 'S' || c == 'p' || c == 'd' || c == 'D'
-			|| c == 'i' || c == 'o' || c == 'O' || c == 'u' || c == 'U'
-			|| c == 'x' || c == 'X' || c == 'c' || c == 'C' || c == '%')
+	if (c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'o'
+			|| c == 'u' || c == 'x' || c == 'X'
+			|| c == 'c' || c == '%')
 	{
 		(*i)++;
 		info->letter = c;
@@ -123,6 +167,13 @@ void		ft_put_letter(const char *fmt, int *i, t_info *info)
 		else
 			(*i)++;
 	}
+	else if (c == 'D' || c == 'O' || c == 'U' || c == 'S' || c == 'C')
+	{
+		ft_special_letter(info, c);
+		*i += 2; 
+	}
+	else
+		(*i)++;
 }
 
 void		ft_parse_arg(const char *fmt, int *i, t_info *info)
