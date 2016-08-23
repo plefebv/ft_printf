@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:03:25 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/06/27 08:55:35 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/23 16:49:36 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int			ft_isletter(char c)
 		return (1);
 	return (0);
 }
-
-
-/*void		ft_check_flag(char *fmt, int *i, char *dest)
-{
-	if (fmt[*i] == '-' || fmt[*i] == '+' || fmt[*i] == '#' || fmt[*i] == ' '
-			|| fmt[*i])
-}*/
