@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   officiel.c                                         :+:      :+:    :+:   */
+/*   ft_precision_diu.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/01 10:09:28 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/05 01:11:52 by plefebvr         ###   ########.fr       */
+/*   Created: 2016/08/23 16:40:25 by plefebvr          #+#    #+#             */
+/*   Updated: 2016/08/23 16:41:35 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "../includes/ft_printf.h"
 
-int			main(void)
+void		ft_precision_diu(t_info *info)
 {
-	int n;
-
-	n = printf(argv[1]);
-	argv[1]printf("Coucou %d\n", n);
-	return (0);
 }
