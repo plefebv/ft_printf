@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 12:40:04 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/06/29 04:13:44 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/22 14:28:34 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void		ft_put_in_lst(t_info *info, char *input)
 		while (info->lst->next)
 			info->lst = info->lst->next;
 		info->lst->next = ft_create_link(input);
+		info->lst = info->lst->next;
 	}
 	info->ret += ft_strlen(input);
 }

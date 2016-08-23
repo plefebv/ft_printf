@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/04 19:57:48 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/05 23:16:02 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/23 11:47:15 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,15 @@ void		ft_dioux_length(void *ap, t_info *info)
 void		ft_u_length(void *ap, t_info *info)
 {
 	if (ft_strcmp("hh", info->length) == 0)
-		ft_put_in_lst(info, ft_itoa_ull((char)ap, info));
-	ft_putnbr((int)(char)ap);
+		ft_put_in_lst(info, ft_itoa_ull((unsigned char)ap, info));
 	if (ft_strcmp("h", info->length) == 0)
-		ft_put_in_lst(info, ft_itoa_ull((short)ap, info));
+		ft_put_in_lst(info, ft_itoa_ull((unsigned short)ap, info));
 	if (ft_strcmp("l", info->length) == 0)
-		ft_put_in_lst(info, ft_itoa_ull((long)ap, info));
+		ft_put_in_lst(info, ft_itoa_ull((unsigned long)ap, info));
 	if (ft_strcmp("ll", info->length) == 0)
-		ft_put_in_lst(info, ft_itoa_ull((long long)ap, info));
+		ft_put_in_lst(info, ft_itoa_ull((unsigned long long)ap, info));
 	if (ft_strcmp("j", info->length) == 0)
-		ft_put_in_lst(info, ft_itoa_ull((intmax_t)ap, info));
+		ft_put_in_lst(info, ft_itoa_ull((uintmax_t)ap, info));
 	if (ft_strcmp("z", info->length) == 0)
 		ft_put_in_lst(info, ft_itoa_ull((size_t)ap, info));
 }
@@ -48,8 +47,9 @@ void		ft_di(void *ap, t_info *info, char *ret)
 {
 	info->length ? ft_di_length(ap, info) :
 	ft_put_in_lst(info, ft_itoa_ll((signed)ap, info));
-	ft_putstr(info->lst->next);
-	ft_add_sign_di(info);
+//	if (info->lst->data)
+//		ft_putstr(info->lst->data);
+	ft_add_sign_diu(info);
 	ret = info->lst->data;
 }
 

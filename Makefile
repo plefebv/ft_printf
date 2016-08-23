@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/31 18:17:14 by plefebvr          #+#    #+#              #
-#    Updated: 2016/07/12 15:15:45 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/08/23 15:17:57 by plefebvr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC = ft_printf.c \
 	ft_work.c \
 	ft_dioux.c \
 	ft_itoa_ll.c \
-	ft_add_sign.c
+	ft_add_sign.c \
+	ft_parse_letter.c
 	  
 OBJ = $(SRC:.c=.o)
 

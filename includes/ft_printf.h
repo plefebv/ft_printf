@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/14 03:05:51 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/23 15:19:46 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,11 @@ void		ft_u_length(void *ap, t_info *info);
 void		ft_di(void *ap, t_info *info, char *ret);
 void		ft_special_letter(t_info *info, char c);
 void		ft_special_letter2(t_info *info, char c);
-void		ft_add_sign(t_info *info);
+void		ft_add_sign_diu(t_info *info);
+void		ft_add_positive_diu(t_info *info);
+void		ft_add_negative_di(t_info *info);
+void		ft_add_space_diu(t_info *info);
+void		ft_put_letter(const char *fmt, int *i, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);
