@@ -14,7 +14,31 @@
 
 int			main(void)
 {
+	ft_printf("%15d\n", 22);
+	printf("%15d\n", 22);
+
+	ft_printf("%015d\n", 22);
+	printf("%015d\n", 22);
+
+	ft_printf("% 15d\n", 22);
+	printf("% 15d\n", 22);
+
 	ft_printf("%+15d\n", 22);
 	printf("%+15d\n", 22);
+
+	ft_printf("%+015d\n", 22);
+	printf("%+015d\n", 22);
+
+	ft_printf("%15d\n", -22);
+	printf("%15d\n", -22);
+
+	ft_printf("%+15d\n", -22);
+	printf("%+15d\n", -22);
+
+	ft_printf("%+015d\n", -22);
+	printf("%+015d\n", -22);	
+
+	ft_printf("% 15d\n", -22);
+	printf("% 15d\n", -22);
 	return (0);
 }

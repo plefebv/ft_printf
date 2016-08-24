@@ -68,7 +68,7 @@ int			ft_printf(const char *fmt, ...)
 			while (info.stars > 0)
 				ft_stars(va_arg(ap, int), &info);
 			ft_work(va_arg(ap, char *), &info);
-			ft_print_info(&info);
+			//ft_print_info(&info);
 			ft_clean_info(&info);
 		}
 	}

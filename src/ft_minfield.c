@@ -35,9 +35,9 @@ void		ft_minfield(t_info *info)
 	int		size;
 
 	size = ft_strlen(info->lst->data);
-	if (info->sign == '-' || (info->flags && info->sign == '+' 
-			&& (ft_strchr(info->flags, ' ') || ft_strchr(info->flags, '+'))))
-		(info->minfield)--;
+	//if (info->sign == '-' || (info->flags && info->sign == '+' 
+	//		&& (ft_strchr(info->flags, ' ') || ft_strchr(info->flags, '+'))))
+	//	(info->minfield)--;
 	if (size < info->minfield)
 	{
 		size = info->minfield - size;
@@ -45,6 +45,7 @@ void		ft_minfield(t_info *info)
 			ft_add_minfield_l(info, size, ' ');
 		else if (info->flags && ft_strchr(info->flags, '0') && !info->true_precision)
 			ft_add_minfield_r(info, size, '0');
+		//else if ()
 		else
 			ft_add_minfield_r(info, size, ' ');
 	}

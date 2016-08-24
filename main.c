@@ -588,11 +588,10 @@ int		main(void)
 	ft_putstr(" | OFCL : ");
 	printf("%llD\n", -4294969999);
 
-	printf("%0+12.12d\n", 88);
+	printf("%0+14.12d\n", 88);
 	ft_printf("%0+14.12d\n", 88);
 
 	ft_printf("%d  coucou %+d petite % d\n", 12, -34, -56);
-	printf("%x\n", 1);
 
 	return (0);
 }

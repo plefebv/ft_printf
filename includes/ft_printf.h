@@ -53,6 +53,7 @@ int			ft_print_list(t_info *info);
 int			ft_dio(t_info *info);
 int			ft_cih(char *s, int c);
 int			ft_size_nbr(char *s);
+int			ft_isupper0(char c);
 
 void		ft_init_strct(t_info *info);
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i);

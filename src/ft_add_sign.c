@@ -12,12 +12,19 @@
 
 #include "../includes/ft_printf.h"
 
+int		ft_isupper0(char c)
+{
+	if (c > '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
 void		ft_add_space_diu(t_info *info)
 {
 	int	i;
 	
 	i = 0;
-	if (info->lst->data && ft_isdigit(info->lst->data[i]))
+	if (info->lst->data && ft_isupper0(info->lst->data[i]))
 		info->lst->data = ft_strjoin(" ", info->lst->data);
 	else
 	{
@@ -33,7 +40,7 @@ void		ft_add_negative_di(t_info *info)
 	int	i;
 	
 	i = 0;
-	if (info->lst->data && ft_isdigit(info->lst->data[i]))
+	if (info->lst->data && ft_isupper0(info->lst->data[i]))
 		info->lst->data = ft_strjoin("-", info->lst->data);
 	else
 	{
@@ -50,7 +57,7 @@ void		ft_add_positive_diu(t_info *info)
 	int	i;
 	
 	i = 0;
-	if (info->lst->data && ft_isdigit(info->lst->data[i]))
+	if (info->lst->data && ft_isupper0(info->lst->data[i]))
 		info->lst->data = ft_strjoin("+", info->lst->data);
 	else
 	{
@@ -76,3 +83,4 @@ void		ft_add_sign_diu(t_info *info)
 			ft_add_space_diu(info);
 	} 
 }
+
