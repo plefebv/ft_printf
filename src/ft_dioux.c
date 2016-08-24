@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/04 19:57:48 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/23 17:32:08 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/24 17:25:17 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void		ft_di(void *ap, t_info *info, char *ret)
 	ft_put_in_lst(info, ft_itoa_ll((signed)ap, info));
 	if (info->true_precision)
 		ft_precision_dioux(info);
+	if (info->minfield > 0)
+		ft_minfield(info);
 	ft_add_sign_diu(info);
 	ret = info->lst->data;
 }

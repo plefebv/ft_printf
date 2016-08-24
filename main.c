@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 04:02:50 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/23 16:50:51 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/24 10:58:52 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -592,6 +592,7 @@ int		main(void)
 	ft_printf("%0+14.12d\n", 88);
 
 	ft_printf("%d  coucou %+d petite % d\n", 12, -34, -56);
+	printf("%x\n", 1);
 
 	return (0);
 }
