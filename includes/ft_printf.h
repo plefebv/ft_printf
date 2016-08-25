@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/24 18:19:02 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/25 13:50:24 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ void		ft_dioux(void *ap, t_info *info);
 void		ft_di_length(void *ap, t_info *info);
 void		ft_dioux_length(void *ap, t_info *info);
 void		ft_u_length(void *ap, t_info *info);
-void		ft_di(void *ap, t_info *info, char *ret);
+void		ft_u(void *ap, t_info *info);
+void		ft_di(void *ap, t_info *info);
 void		ft_special_letter(t_info *info, char c);
 void		ft_special_letter2(t_info *info, char c);
 void		ft_add_sign_diu(t_info *info);

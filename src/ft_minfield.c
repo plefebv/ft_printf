@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/24 12:41:15 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/25 12:55:17 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/25 13:50:40 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@ void		ft_add_minfield_l(t_info *info, int add, char c)
 	if (s)
 	{
 		s[add] = '\0';
+		if (info->letter != 'u')
+		{
 		if (info->sign == '-' || (info->flags && info->sign == '+' 
 			&& (ft_strchr(info->flags, ' ') || ft_strchr(info->flags, '+'))))
 			add--;
+		}
 		ft_add_char(&s, add, c);
 		info->lst->data = ft_strjoin(info->lst->data, s);
 		ft_memdel((void **)&s);
