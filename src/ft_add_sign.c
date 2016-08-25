@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 13:14:57 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/24 18:18:38 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/25 12:55:20 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void		ft_add_space_diu(t_info *info)
 			i++;
 		if (i > 0 && info->lst->data[i] && ft_isdigit(info->lst->data[i]))
 			info->lst->data[i - 1] = ' ';
+		else
+			info->lst->data[0] = ' ';
 	}
 }
 
@@ -48,6 +50,8 @@ void		ft_add_negative_di(t_info *info)
 			i++;
 		if (i > 0 && info->lst->data[i] && ft_isdigit(info->lst->data[i]))
 			info->lst->data[i - 1] = '-';
+		else
+			info->lst->data[0] = '-';
 	}
 }
 
@@ -65,6 +69,8 @@ void		ft_add_positive_diu(t_info *info)
 			i++;
 		if (i > 0 && info->lst->data[i] && ft_isdigit(info->lst->data[i]))
 			info->lst->data[i - 1] = '+';
+		else
+			info->lst->data[0] = '+';
 	}
 }
 
