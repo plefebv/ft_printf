@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/31 18:17:14 by plefebvr          #+#    #+#              #
-#    Updated: 2016/08/25 13:50:25 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/08/25 14:04:04 by plefebvr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRC = ft_printf.c \
 	ft_precision_dioux.c \
 	ft_minfield.c \
 	ft_di.c \
-	ft_u.c
+	ft_u.c \
+	ft_char.c
 	  
 OBJ = $(SRC:.c=.o)
 
