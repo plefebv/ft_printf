@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/25 14:40:55 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/29 12:10:06 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void		ft_add_char(char **s, int add, char c);
 void		ft_minfield(t_info *info);
 void		ft_add_minfield_l(t_info *info, int add, char c);
 void		ft_add_minfield_r(t_info *info, int add, char c);
-void		ft_char(void *ap, t_info *info);
+void		ft_sc(void *ap, t_info *info);
 void		ft_char_minfield(t_info *info, int left);
 
 t_lst		*ft_create_list(const char *fmt);
