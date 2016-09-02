@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/04 19:14:13 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/29 12:09:29 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/01 12:39:42 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		ft_work(void *ap, t_info *info)
 			|| info->letter == 'u' || info->letter == 'x' 
 			|| info->letter == 'X')
 		ft_dioux(ap, info);
-	else if (info->letter == 'c' || info->letter = 's')
-		ft_sa(ap, info);
-//	if (info->letter == 's')
+	else if (info->letter == 'c' || info->letter == 's')
+		ft_sc(ap, info);
+
 }

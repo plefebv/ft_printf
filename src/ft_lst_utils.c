@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 12:40:04 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/22 14:28:34 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/01 16:03:29 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_lst		*ft_create_link(char *input)
 	ret = (t_lst*)malloc(sizeof(t_lst));
 	if (ret)
 	{
-		ret->data = input;
+		ret->data = ft_strdup(input);
 		ret->next = NULL;
 	}
 	return (ret);
@@ -57,11 +57,11 @@ int			ft_print_list(t_info *info)
 	}
 	while (tmp)
 	{
-		//ft_putstr(" |");
+		//ft_putstr("-|");
 		ft_putstr(tmp->data);
 		count += ft_strlen(tmp->data);
 		tmp = tmp->next;
-		//ft_putstr("| ");
+		//ft_putstr("|");
 	}
 	return (count);
 }

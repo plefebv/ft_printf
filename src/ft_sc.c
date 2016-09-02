@@ -6,13 +6,12 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/25 14:02:56 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/29 12:10:50 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/01 16:06:06 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-
-
+/*
 void			ft_char_minfield(t_info *info, int left)
 {
 	char	*s;
@@ -36,9 +35,22 @@ void			ft_char_minfield(t_info *info, int left)
 		}
 		ft_memdel((void **)&s);
 	}
-}
+}*/
 
-void			ft_char(void *ap, t_info *info)
+void			ft_sc(void *ap, t_info *info)
 {
-		
-}
+	if (info->letter == 'c')
+	{
+		if (info->length && ft_strcmp("l", info->length) == 0)
+			ft_put_wc((wchar_t)ap, info);
+		else
+			ft_put_char((char)ap, info);
+	}
+	if (info->letter == 's')
+	{
+		if (info->length && ft_strcmp("l", info->length) == 0)
+			ft_put_ws((wchar_t *)ap, info);
+		else
+			ft_put_in_lst(info, (char *)ap);
+	}
+}	

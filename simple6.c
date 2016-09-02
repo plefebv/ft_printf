@@ -6,7 +6,7 @@
 /*   By: plefebvr <plefebvr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/27 18:39:38 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/29 13:21:41 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/08/30 21:13:37 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@ int	main(void)
 /*	wint_t c[] = L"É";
 	wprintf("%c\n", c);
 	wprintf("%lc\n", c);*/\
-	char *s = "\u00A3\n";
-	wchar_t *c = L"£££££\n";
+	char *s = "\u00A3 £ \n";
+//	wchar_t *c = L"£££££\n";
 //for (int i = 0x0000; i <= 0xffff; i++) {
 
     //then somehow increment the string
 //	printf("%ci\n", c);
 	//char c = '\0';
-	printf("%s\n", s);
-	printf("%ls\n", c);
+	printf(" 1 : %s %s £ \n", "\u00A3 £", "£");
+	ft_printf("2 : %s \u00A3 £ \n", "\u00A3");
+	printf("3 : %s \n", s);
+//	printf("%ls\n", c);
 	//t_printf("¡\n");
 	//printf("%c\n", c);
 //    str = "\u25A2\n";

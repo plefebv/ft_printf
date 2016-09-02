@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/29 12:10:06 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/02 13:13:17 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct			s_info
 }						t_info;
 
 char		*ft_itoa_ll(long long n, t_info *info);
-char		*ft_itoa_ull(unsigned long long n, t_info *info);
+char		*ft_itoa_ull(unsigned long long n);
 //char		*ft_itoa_test(int n, t_info *info);
 
 int			ft_printf(const char *fmt, ...);
@@ -84,7 +84,11 @@ void		ft_minfield(t_info *info);
 void		ft_add_minfield_l(t_info *info, int add, char c);
 void		ft_add_minfield_r(t_info *info, int add, char c);
 void		ft_sc(void *ap, t_info *info);
-void		ft_char_minfield(t_info *info, int left);
+//void		ft_char_minfield(t_info *info, int left);
+void		ft_put_wc(wchar_t ap, t_info *info);
+void		ft_put_char(char ap, t_info *info);
+void		ft_put_ws(wchar_t *ap, t_info *info);
+void		ft_convert_wchar(wchar_t ap, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);
