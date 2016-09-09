@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 15:16:17 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/23 15:17:44 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/07 14:50:44 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ void		ft_put_letter(const char *fmt, int *i, t_info *info)
 	char	c;
 
 	c = fmt[*i + 1];
+	if (c == '+')
+	{
+		info->flags = info->flags ? ft_strjoin(info->flags, "+") : ft_strdup("+");
+		c = fmt[++(*i) + 1];
+	}
 	if (c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'o'
 			|| c == 'u' || c == 'x' || c == 'X'
 			|| c == 'c' || c == '%')
@@ -26,7 +31,7 @@ void		ft_put_letter(const char *fmt, int *i, t_info *info)
 		if (c == '%')
 		{
 			(*i)++;
-			ft_put_in_lst(&info[0], "%%");
+			ft_put_in_lst(&info[0], "%");
 		}
 		else
 			(*i)++;

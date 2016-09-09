@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 03:00:16 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/01 16:00:01 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/07 16:09:01 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,18 +59,34 @@ int			ft_printf(const char *fmt, ...)
 	i = 0;
 	va_start(ap, fmt);
 	ft_init_strct(&info);
-	while (fmt[i] != '\0')
+	while (fmt && fmt[i] != '\0')
 	{
+	//	ft_putstr("i:1 = ");
+	//	ft_nbrendl(i);
 		ft_epur_fmt(&info, fmt, &i);
+	//	ft_putstr("i:2 = ");
+	//	ft_nbrendl(i);
 		if (fmt[i] && fmt[i] == '%')
 		{
+	//		ft_putstr("i:3 = ");
+	//		ft_nbrendl(i);
 			ft_parse_arg(fmt, &i, &info);
+	//		ft_putstr("i:3.2 = ");
+	//		ft_nbrendl(i);
 			while (info.stars > 0)
-				ft_stars(va_arg(ap, int), &info);
-			ft_work(va_arg(ap, char *), &info);
-			//ft_print_info(&info);
+				ft_stars(va_arg(ap, int), &info);	
+	//		ft_putstr("i:3.3 = ");
+	//		ft_nbrendl(i);
+			ft_work(va_arg(ap, void *), &info);
+//			ft_print_info(&info);
+	//		ft_putstr("i:4 = ");
+	//		ft_nbrendl(i);		
 			ft_clean_info(&info);
 		}
+	//	ft_putstr("i:5 = ");
+	//	ft_nbrendl(i);
 	}
+	va_end(ap);
+	//ft_putendl("choucroute");
 	return (ft_print_list(&info));
 }

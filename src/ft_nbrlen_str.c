@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_work.c                                          :+:      :+:    :+:   */
+/*   ft_nbrlen_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/04 19:14:13 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/07 15:31:49 by plefebvr         ###   ########.fr       */
+/*   Created: 2016/09/06 22:27:19 by plefebvr          #+#    #+#             */
+/*   Updated: 2016/09/06 22:38:12 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void		ft_work(void *ap, t_info *info)
+int		ft_nbrlen_str(char *s)
 {
-	if (info->letter == 'd' || info->letter == 'i' || info->letter == 'o'
-			|| info->letter == 'u' || info->letter == 'x' 
-			|| info->letter == 'X')
-		ft_dioux(ap, info);
-	else if (info->letter == 'c' || info->letter == 's')
-		ft_sc(ap, info);
-	else if (info->letter == '%')
-	{
-		ft_treat_data(info);
-	}
-//	else if (info->letter == '%')
-//		ft_percentage(info);
+	int		i;
+	int		ret;
+
+	i = 0;
+	ret = 0;
+	while (!(ft_isdigit(s[i])))
+			i++;
+	while (ft_isdigit(s[i + ret]))
+		ret++;
+	return (ret);
 }

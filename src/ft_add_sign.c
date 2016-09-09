@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 13:14:57 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/25 12:55:20 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/06 22:33:22 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ void		ft_add_negative_di(t_info *info)
 		if (i > 0 && info->lst->data[i] && ft_isdigit(info->lst->data[i]))
 			info->lst->data[i - 1] = '-';
 		else
-			info->lst->data[0] = '-';
+		{
+			if (ft_nbrlen_str(info->lst->data) > info->precision)
+				info->lst->data[0] = '-';
+			else
+				info->lst->data = ft_strjoin("-", info->lst->data);
+		}
 	}
 }
 
@@ -63,6 +68,12 @@ void		ft_add_positive_diu(t_info *info)
 	i = 0;
 	if (info->lst->data && ft_isupper0(info->lst->data[i]))
 		info->lst->data = ft_strjoin("+", info->lst->data);
+	else if (info->lst->data && 
+				 !(ft_isupper0(info->lst->data[i]))
+				&& (info->flags && ft_strchr(info->flags, '-')))
+	{
+		info->lst->data = ft_strjoin("+", info->lst->data);
+	}
 	else
 	{
 		while (info->lst->data[i] && !(ft_isdigit(info->lst->data[i])))
@@ -70,7 +81,12 @@ void		ft_add_positive_diu(t_info *info)
 		if (i > 0 && info->lst->data[i] && ft_isdigit(info->lst->data[i]))
 			info->lst->data[i - 1] = '+';
 		else
-			info->lst->data[0] = '+';
+		{
+			if (ft_strcmp(info->lst->data, "0") == 0)
+				info->lst->data = ft_strjoin("+", info->lst->data);
+			else
+				info->lst->data[0] = '+';
+		}
 	}
 }
 

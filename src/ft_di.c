@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/25 13:03:51 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/01 13:26:55 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/08 18:27:27 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,28 @@ void		ft_di_length(void *ap, t_info *info)
 
 void		ft_di(void *ap, t_info *info)
 {
+	int		i;
+
+	i = 0;
 	info->length ? ft_di_length(ap, info) :
 	ft_put_in_lst(info, ft_itoa_ll((signed)ap, info));
 	if (info->true_precision)
 		ft_precision_dioux(info);
 	if (info->minfield > 0)
 		ft_minfield(info);
+	if (info->true_precision == 1 && !info->precision && (int)ap == 0)
+	{
+		while (info->lst->data && info->lst->data[i] != '\0')
+		{
+			if (info->lst->data[i] == '0')
+			{
+				if (info->minfield > 0)
+					info->lst->data[i] = ' ';
+				else
+					info->lst->data[i] = '\0';
+			}
+			i++;
+		}
+	}
 	ft_add_sign_diu(info);
 }

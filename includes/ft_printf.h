@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/02 13:13:17 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/10 00:54:30 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef struct			s_retlist
 {
 	char 				*data;
-	int					ret;
+	unsigned long long	ret;
 	struct s_retlist	*next;
 }						t_lst;
 
@@ -38,6 +38,8 @@ typedef struct			s_info
 	char				letter;
 	int					stars;
 	int					ret;
+	int					ret_tmp;
+	int					ret_c;
 	char				sign;
 	t_lst				*lst;
 	t_lst				*lst_first;
@@ -45,7 +47,11 @@ typedef struct			s_info
 
 char		*ft_itoa_ll(long long n, t_info *info);
 char		*ft_itoa_ull(unsigned long long n);
-//char		*ft_itoa_test(int n, t_info *info);
+char		*ft_space_strig(int size, t_info *info);
+char		*ft_strsub_spe(t_info *info, int add, int i);
+char		*ft_strjoin_spe(char *str, t_info *info, int add, int tmp);
+
+unsigned int 	ft_size_ws(wchar_t *ap);
 
 int			ft_printf(const char *fmt, ...);
 int			ft_isletter(char c);
@@ -54,6 +60,8 @@ int			ft_dio(t_info *info);
 int			ft_cih(char *s, int c);
 int			ft_size_nbr(char *s);
 int			ft_isupper0(char c);
+int			ft_nbrlen_str(char *s);
+int			ft_size_wc(wchar_t ap);
 
 void		ft_init_strct(t_info *info);
 void		ft_epur_fmt(t_info *info, const char *fmt, int *i);
@@ -84,11 +92,14 @@ void		ft_minfield(t_info *info);
 void		ft_add_minfield_l(t_info *info, int add, char c);
 void		ft_add_minfield_r(t_info *info, int add, char c);
 void		ft_sc(void *ap, t_info *info);
-//void		ft_char_minfield(t_info *info, int left);
+void		ft_char_minfield(t_info *info, int left);
 void		ft_put_wc(wchar_t ap, t_info *info);
 void		ft_put_char(char ap, t_info *info);
 void		ft_put_ws(wchar_t *ap, t_info *info);
 void		ft_convert_wchar(wchar_t ap, t_info *info);
+void		ft_percentage(t_info *info);
+void		ft_treat_data(t_info *info);
+void		ft_convert_ws_to_s(wchar_t ap, int i, t_info *info);
 
 t_lst		*ft_create_list(const char *fmt);
 t_lst		*ft_create_link(char *input);

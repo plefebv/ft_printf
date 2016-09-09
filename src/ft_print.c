@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_work.c                                          :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/04 19:14:13 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/07 15:31:49 by plefebvr         ###   ########.fr       */
+/*   Created: 2016/09/07 20:43:58 by plefebvr          #+#    #+#             */
+/*   Updated: 2016/09/07 21:41:08 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void		ft_work(void *ap, t_info *info)
+int		ft_print(t_info *info)
 {
-	if (info->letter == 'd' || info->letter == 'i' || info->letter == 'o'
-			|| info->letter == 'u' || info->letter == 'x' 
-			|| info->letter == 'X')
-		ft_dioux(ap, info);
-	else if (info->letter == 'c' || info->letter == 's')
-		ft_sc(ap, info);
-	else if (info->letter == '%')
+	char	*print;
+	int		i;
+
+	i = 0;
+	print = (char *)malloc(sizeof(char) * (info->ret + 1));
+	while (info->lst->next != NULL)
 	{
-		ft_treat_data(info);
+		while (info->lst->ret >= 0)
+		{
+			
+		}
+
 	}
-//	else if (info->letter == '%')
-//		ft_percentage(info);
+
 }

@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 19:19:05 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/12 15:43:06 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/07 20:34:03 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void			ft_init_strct(t_info *strct)
 	strct->letter = '?';
 	strct->stars = 0;
 	strct->ret = 0;
+	strct->ret_tmp = 0;
+	strct->ret_c = 0;
 	strct->sign = '+';
 	ft_init_lst(strct);
 }

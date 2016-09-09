@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:26:56 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/02 13:13:30 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/06 22:56:09 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char 			*ft_itoa_ll(long long n, t_info *info)
 	j = n >= 0 ? n : -n;
 	if (n > 9223372036854775807)
 		return (ft_strdup("9223372036854775807"));
+	if (n < -9223372036854775807)
+		return (ft_strdup("-9223372036854775808"));
 	if ((str = (char *)malloc(sizeof(char) * (i + 1))))
 	{
 		str[i + 1] = '\0';

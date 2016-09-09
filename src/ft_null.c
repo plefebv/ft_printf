@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_work.c                                          :+:      :+:    :+:   */
+/*   ft_null.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/04 19:14:13 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/07 15:31:49 by plefebvr         ###   ########.fr       */
+/*   Created: 2016/09/09 15:53:50 by plefebvr          #+#    #+#             */
+/*   Updated: 2016/09/09 15:56:51 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void		ft_work(void *ap, t_info *info)
+static char			*trickydup(char *s)
+
+void			ft_put_in_lst_null(t_info *info, char *input)
 {
-	if (info->letter == 'd' || info->letter == 'i' || info->letter == 'o'
-			|| info->letter == 'u' || info->letter == 'x' 
-			|| info->letter == 'X')
-		ft_dioux(ap, info);
-	else if (info->letter == 'c' || info->letter == 's')
-		ft_sc(ap, info);
-	else if (info->letter == '%')
+	if (info->lst_first->data == NULL)
 	{
-		ft_treat_data(info);
+		info->lst->data = trickydup(input);
+		info->lst_first = info->lst;
 	}
-//	else if (info->letter == '%')
-//		ft_percentage(info);
+	else
+	{
+		while (info->lst->next)
+			info->lst = info->lst->next;
+		info->lst->next = ft_create_link(input);
+		info->lst = info->lst->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:04:25 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/08/23 15:41:57 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/07 13:07:49 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,9 @@ void		ft_put_length(const char *fmt, int *i, t_info *info)
 		(*i)++;
 		info->length = ft_strsub(&fmt[*i], 0, 1);
 	}
+	while (fmt[*i + 1] == 'h' || fmt[*i + 1] == 'l' ||
+			fmt[*i + 1] == 'j' || fmt[*i + 1] == 'z')
+		(*i)++;
 }
 
 void		ft_parse_arg(const char *fmt, int *i, t_info *info)

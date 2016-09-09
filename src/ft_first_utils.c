@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 18:02:07 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/07/14 03:03:18 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/06 20:08:19 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,12 @@ void		ft_epur_fmt(t_info *info, const char *fmt, int *i)
 
 	tmp = *i;
 	data = NULL;
+//	ft_putstr("i:6:1 = ");
+//	ft_nbrendl(*i);
 	while (fmt[*i] && fmt[*i] != '%')
-	*i += 1;
+		*i += 1;
+//	ft_putstr("i:6:2 = ");
+//	ft_nbrendl(*i);
 	data = ft_strsub(fmt, tmp, *i - tmp);
 	ft_put_in_lst(&info[0], data);
 }

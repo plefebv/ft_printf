@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 12:40:04 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/01 16:03:29 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/09 23:41:26 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,30 +40,51 @@ void		ft_put_in_lst(t_info *info, char *input)
 		info->lst->next = ft_create_link(input);
 		info->lst = info->lst->next;
 	}
-	info->ret += ft_strlen(input);
 }
 
 int			ft_print_list(t_info *info)
 {
 	t_lst	*tmp;
-	int		count;
+	int		i;
+	char	*str;
+	int		rien = 0;
 
-	count = 0;
-	tmp = info->lst_first;
-	if (!tmp)
+	i = 0;
+	info->lst = info->lst_first;
+	str = NULL;
+	if (!info->lst->data)
+	{
+		return (0);
+	}
+	else if (!info->lst_first)
 	{
 		ft_putstr("0\n");
 		return (0);
 	}
-	while (tmp)
+	while (info->lst)
 	{
-		//ft_putstr("-|");
-		ft_putstr(tmp->data);
-		count += ft_strlen(tmp->data);
-		tmp = tmp->next;
-		//ft_putstr("|");
+		if (str == NULL)
+		{
+			//ft_putstr("SUUUUUB = ");
+			str = ft_strsub_spe(info, info->lst->ret, 0);
+		}
+		else
+		{
+			str = ft_strjoin_spe(str, info, i, 0);
+		}
+		i = info->lst->ret;
+		info->lst = info->lst->next;
 	}
-	return (count);
+	if (i)
+	{
+		if (str)
+			info->ret++;
+	}
+	if (info->ret > 0)
+	{
+		write(1, str, info->ret);
+	}
+	return (info->ret + info->ret_c);
 }
 
 /*t_lst		*ft_create_list(const char *fmt)

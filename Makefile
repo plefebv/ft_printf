@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/02 13:57:36 by plefebvr          #+#    #+#              #
-#    Updated: 2016/09/02 13:57:39 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/09/09 13:09:58 by plefebvr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ FONCTIONS = src/ft_printf.c \
 			src/ft_u.c \
 			src/ft_sc.c \
 			src/ft_put_c.c \
-			src/ft_put_s.c
+			src/ft_put_s.c \
+			src/ft_nbrlen_str.c \
+			src/ft_spe.c
 
 OBJ = ft_printf.o \
 			ft_lst_utils.o \
@@ -48,8 +50,9 @@ OBJ = ft_printf.o \
 			ft_u.o \
 			ft_sc.o \
 			ft_put_c.o \
-			ft_put_s.o
-
+			ft_put_s.o \
+			ft_nbrlen_str.o \
+			ft_spe.o
 
 FONCTIONS_LIB = src/libft/ft_isascii.c src/libft/ft_lstdelone.c \
 				src/libft/ft_memchr.c src/libft/ft_nbrendl.c \
