@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/21 10:45:45 by plefebvr          #+#    #+#              #
-#    Updated: 2016/09/25 18:53:36 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/09/30 18:12:16 by plefebvr         ###   ########.fr        #
 
 # **************************************************************************** #
 
@@ -78,7 +78,8 @@ SRC =	ft_isprint.c \
 		ft_strndup.c \
 		ft_checkchar.c \
 		ft_strtolower.c \
-		ft_strdup_f.c
+		ft_strdup_f.c \
+		get_next_line.c
 OBJ =	$(SRC:.c=.o)	
 HEADER = includes/libft.h
 FLAG = -Wall -Wextra -Werror

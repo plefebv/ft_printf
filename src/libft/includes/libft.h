@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:49:09 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/25 18:53:23 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/30 18:22:05 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include "../../../includes/ft_printf.h"
+# include "get_next_line.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>

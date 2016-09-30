@@ -6,7 +6,7 @@
 #    By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/02 13:57:36 by plefebvr          #+#    #+#              #
-#    Updated: 2016/09/28 19:56:17 by plefebvr         ###   ########.fr        #
+#    Updated: 2016/09/30 18:14:58 by plefebvr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,7 +95,7 @@ FONCTIONS_LIB = src/libft/ft_isascii.c src/libft/ft_lstdelone.c \
 				src/libft/ft_strnequ.c src/libft/ft_strsub.c \
 				src/libft/ft_lstiter.c src/libft/ft_strjoin_f1.c \
 			   	src/libft/ft_strjoin_f2.c src/libft/ft_strjoin_f.c \
-				src/libft/ft_strdup_f.c
+				src/libft/ft_strdup_f.c src/libft/get_next_line.c
 
 OBJ_O_LIB = ft_isascii.o ft_lstdelone.o ft_memchr.o ft_nbrendl.o \
 			ft_putnbr_fd.o ft_strclr.o ft_striter.o ft_strmapi.o \
@@ -114,7 +114,7 @@ OBJ_O_LIB = ft_isascii.o ft_lstdelone.o ft_memchr.o ft_nbrendl.o \
 			ft_memccpy.o ft_memset.o ft_putnbr.o ft_strchr.o \
 			ft_strequ.o ft_strmap.o ft_strnequ.o ft_strsub.o \
 			ft_strjoin_f1.o ft_strjoin_f2.o ft_strjoin_f.o \
-			ft_strdup_f.o
+			ft_strdup_f.o get_next_line.o
 
 HEADER = includes/libftprintf.h
 HEADER_LIB = src/libft/includes/libft.h

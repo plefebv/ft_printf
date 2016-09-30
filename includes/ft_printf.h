@@ -6,7 +6,7 @@
 /*   By: plefebvr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 00:48:33 by plefebvr          #+#    #+#             */
-/*   Updated: 2016/09/28 20:11:49 by plefebvr         ###   ########.fr       */
+/*   Updated: 2016/09/30 18:14:25 by plefebvr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include "../src/libft/includes/libft.h"
+# include "../src/libft/includes/get_next_line.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
